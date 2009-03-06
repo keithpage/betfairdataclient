@@ -46,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sports\Interfaces\ISports.cs" />
+    <Compile Include="Sports\Views\EventBase.cs" />
+    <Compile Include="Sports\Views\MarketBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\Interfaces\" />
@@ -53,8 +56,6 @@
     <Folder Include="DataProviders\SportsExchangeAPI6\" />
     <Folder Include="DataProviders\SportsGlobalAPI6\" />
     <Folder Include="Factories\" />
-    <Folder Include="Sports\Interfaces\" />
-    <Folder Include="Sports\Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
