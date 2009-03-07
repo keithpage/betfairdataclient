@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProviders\Sports\BetfairAPI6.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sports\Interfaces\ISports.cs" />
     <Compile Include="Sports\Views\EventBase.cs" />
@@ -53,8 +54,6 @@
   <ItemGroup>
     <Folder Include="Account\Interfaces\" />
     <Folder Include="Account\Views\" />
-    <Folder Include="DataProviders\SportsExchangeAPI6\" />
-    <Folder Include="DataProviders\SportsGlobalAPI6\" />
     <Folder Include="Factories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
