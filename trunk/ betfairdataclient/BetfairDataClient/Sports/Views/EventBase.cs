@@ -51,30 +51,84 @@ using System.Text;
 
 namespace Betfair.Data.Sports.Views
 {
+	/// <summary>
+	/// Class that holds all event information
+	/// </summary>
     public sealed class EventBase
     {
-        public EventBase() { }
-        public EventBase(object internalReferenceId)
-        {
-            this.internalReferenceId = internalReferenceId;
-        }
+		// standard type name
+		private const String c_EventBase = "EventBase";
 
-        /// <summary>
-        /// The unique identifier for this object in this instance
-        /// </summary>
-        public  readonly object internalReferenceId;
+		#region Ctor
 
-        /// <summary>
-        /// Data store for this element
-        /// </summary>
-        public Dictionary<object, object> values;
+		/// <summary>
+		/// Initializes a new instance of the <see cref="MarketBase"/> class.
+		/// </summary>
+		public EventBase() 
+		{
+			// create value dictionary
+			this.Values = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
 
-        /// <summary>
-        /// The fine grained internal type of this objects values
-        /// eg. istypeof = Betfair.Data.Sports.Market.HorseRacing
-        /// or istypeof = Betfair.Data.Sports.Market.IrishTote
-        /// or istypeof = Betfair.Data.Sports.Market.AsianHandicap
-        /// </summary>
-        public readonly string isTypeOf;
+			// set standard type name
+			this.TypeName = c_EventBase;
+		}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="MarketBase"/> class.
+		/// </summary>
+		/// <param name="internalReferenceId">The internal reference id.</param>
+		public EventBase(object internalReferenceId)
+			: this()
+		{
+			// set internal id
+			this.InternalReferenceId = internalReferenceId;
+		}
+
+		#endregion
+
+		#region Properties
+
+		private object _InternalReferenceId;
+
+		/// <summary>
+		/// Gets or sets the internal reference id.
+		/// </summary>
+		/// <value>The internal reference id.</value>
+		public object InternalReferenceId
+		{
+			get { return _InternalReferenceId; }
+			internal set { _InternalReferenceId = value; }
+		}
+
+		private string _TypeName;
+
+		/// <summary>
+		/// Gets or sets the name of the type.
+		/// The type name represents the  fine grained internal type of this objects values
+		/// eg. istypeof = Betfair.Data.Sports.Market.HorseRacing
+		/// or istypeof = Betfair.Data.Sports.Market.IrishTote
+		/// or istypeof = Betfair.Data.Sports.Market.AsianHandicap.
+		/// </summary>
+		/// <value>The name of the type.</value>
+		public string TypeName
+		{
+			get { return _TypeName; }
+			set { _TypeName = value; }
+		}
+
+		private Dictionary<String, object> _Values;
+
+		/// <summary>
+		/// Gets or sets the values.
+		/// </summary>
+		/// <value>The values.</value>
+		public Dictionary<String, object> Values
+		{
+			get { return _Values; }
+			private set { _Values = value; }
+		}
+
+		#endregion
+
     }
 }
