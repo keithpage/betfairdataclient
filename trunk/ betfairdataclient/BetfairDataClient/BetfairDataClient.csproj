@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D9747574-3CAE-444E-8D09-F262180B47E8}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -45,15 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\Interfaces\IAccount.cs" />
+    <Compile Include="Account\Views\AccountStatementBase.cs" />
+    <Compile Include="Account\Views\FundsBase.cs" />
+    <Compile Include="Account\Views\ProfileBase.cs" />
     <Compile Include="DataProviders\Sports\BetfairAPI6.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sports\Interfaces\ISports.cs" />
+    <Compile Include="Sports\Views\SelectionBase.cs" />
     <Compile Include="Sports\Views\EventBase.cs" />
     <Compile Include="Sports\Views\MarketBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Account\Interfaces\" />
-    <Folder Include="Account\Views\" />
     <Folder Include="Factories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

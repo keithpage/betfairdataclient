@@ -1,5 +1,5 @@
 ﻿/* 
- * BetfairAPI6.cs
+ * ProfileBase.cs
  * 
  * Copyright (c) 2009 © The Sporting Exchange Limited. All rights reserved. http://www.betfair.com.
  * BETFAIR® and the BETFAIR LOGO are registered trade marks of The Sporting Exchange Limited. 
@@ -49,9 +49,83 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Betfair.Data.DataProviders.Sports
+namespace Betfair.Data.Account.Views
 {
-    public class BetfairAPI6 : Betfair.Data.Sports.Interfaces.ISports
+	/// <summary>
+	/// Class that holds all user account profile information
+	/// </summary>
+    public sealed class ProfileBase
     {
+		// standard type name
+		private const String c_EventBase = "ProfileBase";
+
+		#region Ctor
+
+		/// <summary>
+        /// Initializes a new instance of the <see cref="ProfileBase"/> class.
+		/// </summary>
+		public ProfileBase() 
+		{
+			// create value dictionary
+			this.Values = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+
+			// set standard type name
+			this.TypeName = c_EventBase;
+		}
+
+		/// <summary>
+        /// Initializes a new instance of the <see cref="ProfileBase"/> class.
+		/// </summary>
+		/// <param name="internalReferenceId">The internal reference id.</param>
+        public ProfileBase(object internalReferenceId)
+			: this()
+		{
+			// set internal id
+			this.InternalReferenceId = internalReferenceId;
+		}
+
+		#endregion
+
+		#region Properties
+
+		private object _InternalReferenceId;
+
+		/// <summary>
+		/// Gets or sets the internal reference id.
+		/// </summary>
+		/// <value>The internal reference id.</value>
+		public object InternalReferenceId
+		{
+			get { return _InternalReferenceId; }
+			internal set { _InternalReferenceId = value; }
+		}
+
+		private string _TypeName;
+
+		/// <summary>
+		/// Gets or sets the name of the type.
+		/// The type name represents the  fine grained internal type of this objects values
+		/// </summary>
+		/// <value>The name of the type.</value>
+		public string TypeName
+		{
+			get { return _TypeName; }
+			set { _TypeName = value; }
+		}
+
+		private Dictionary<String, object> _Values;
+
+		/// <summary>
+		/// Gets or sets the values.
+		/// </summary>
+		/// <value>The values.</value>
+		public Dictionary<String, object> Values
+		{
+			get { return _Values; }
+			private set { _Values = value; }
+		}
+
+		#endregion
+
     }
 }

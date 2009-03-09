@@ -1,5 +1,5 @@
 ﻿/* 
- * BetfairAPI6.cs
+ * IAccount.cs
  * 
  * Copyright (c) 2009 © The Sporting Exchange Limited. All rights reserved. http://www.betfair.com.
  * BETFAIR® and the BETFAIR LOGO are registered trade marks of The Sporting Exchange Limited. 
@@ -49,9 +49,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Betfair.Data.DataProviders.Sports
+namespace Betfair.Data.Account.Interfaces
 {
-    public class BetfairAPI6 : Betfair.Data.Sports.Interfaces.ISports
+    public interface IAccount
     {
+        /*** Profile ***/
+
+        /// <summary>
+        /// Get the user profile information
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        List<Betfair.Data.Account.Views.ProfileBase> GetProfile(object[] args);
+
+        /// <summary>
+        /// Update the user profile information
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        Boolean UpdateProfile(object[] args);
+
+        /*** Funds ***/
+
+        /// <summary>
+        /// Returns the available funds in the account wallet/s
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        List<Betfair.Data.Account.Views.FundsBase> GetAvailableFunds(object[] args);
+
+        /// <summary>
+        /// Deposit funds to the user account
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        Boolean DepositFunds(object[] args);
+
+        /// <summary>
+        /// Withdraw funds from the user account
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        Boolean WithdrawFunds(object[] args);
+
+        /// <summary>
+        /// Transfer funds between account wallets
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        Boolean TransferFunds(object[] args);
+
+        /*** Transactions ***/
+
+        /// <summary>
+        /// Request a statement of account transactions
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        List<Betfair.Data.Account.Views.AccountStatementBase> GetAccountStatement(object[] args);
     }
 }

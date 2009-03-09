@@ -92,5 +92,15 @@ namespace Betfair.Data.Sports.Interfaces
         /// <param name="args"></param>
         /// <returns></returns>
         Boolean MarketWatchListContains(object args);
+
+        /*** Selection Data Operations ***/
+
+        /// <summary>
+        /// Get the selections in a market.
+        /// We use the term selection rather than runner because selections is more generic.
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        List<Betfair.Data.Sports.Views.SelectionBase> GetSelections(object args);
     }
 }
