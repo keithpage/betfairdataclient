@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="IAccount.cs" />
     <Compile Include="ICache.cs" />
-    <Compile Include="IDCreator.cs" />
     <Compile Include="ISports.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
