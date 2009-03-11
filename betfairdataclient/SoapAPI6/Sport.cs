@@ -32,6 +32,7 @@ using System;
 using System.Collections.Generic;
 using Betfair.Connection;
 using Betfair.DAL;
+using Betfair.DataProvider.SoapAPI6.Betfair.api.soap.global;
 using Betfair.Facade;
 
 namespace Betfair.DataProvider.SoapAPI6
@@ -49,7 +50,35 @@ namespace Betfair.DataProvider.SoapAPI6
 
         public void Open()
         {
-            throw new NotImplementedException();
+            // Just for testing - do not take too seriously!!!
+            try
+            {
+                ConnectionStatus = ConnectionState.Connecting;
+
+                var globalProxy = new BFGlobalService();
+
+                var req = new LoginReq();
+                req.password = Connection.Password;
+                req.username = Connection.Username;
+                req.vendorSoftwareId = Connection.SoftwareId;
+                req.productId = Connection.ProductId;
+
+                var resp = globalProxy.login(req);
+
+                if (resp.header.errorCode == APIErrorEnum.OK && resp.errorCode == LoginErrorEnum.OK)
+                {
+                    ConnectionStatus = ConnectionState.Open;
+                }
+                else
+                {
+                    throw new Exception("Connection failed. Reason " + resp.errorCode);
+                }
+            }
+            catch (Exception)
+            {
+                ConnectionStatus = ConnectionState.Closed;
+                throw;
+            }
         }
 
         public void Close()
