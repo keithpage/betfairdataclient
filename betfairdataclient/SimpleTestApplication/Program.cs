@@ -17,7 +17,7 @@ namespace SimpleTestApplication
             sb.MaxConnections = 20;
             sb.Password = "MyPassword";
             sb.ProductId = 82;
-            sb.Provider = "SoapApi6";
+            sb.Provider = "SoapAPI6";
             sb.SoftwareId = 0;
             sb.Username = "MyUsername";
             Console.WriteLine(sb.ConnectionString);
@@ -25,11 +25,17 @@ namespace SimpleTestApplication
             sb.Username = null;
             Console.WriteLine(sb.ConnectionString);
 
-            sb.ConnectionString = "Username = MyUsername2; Provider = SoapApi6; ProductId = 82; Password=MyPassword; MaxConnections = 20; CustomValue = 23456";
+            sb.ConnectionString = "Username = MyUsername2; Provider = SoapAPI6; ProductId = 82; Password=MyPassword; MaxConnections = 20; CustomValue = 23456";
             Console.WriteLine(sb.ConnectionString);
 
-            ISports sport = SportFactory.Create(SportFactory.CommonProvider.SoapAPI6);
+            ISports sport = SportFactory.Create(sb.Provider);
+            //ISports sport = SportFactory.Create(SportFactory.CommonProvider.SoapAPI6);
+            //sport.Open(sb.ConnectionString);
+
             IAccount account = AccountFactory.Create(AccountFactory.CommonAccountProviders.SoapAPI6);
+            //account.Open(sb.ConnectionString);
+
+            Console.WriteLine(account.ConnectionStatus.ToString());
         }
     }
 }

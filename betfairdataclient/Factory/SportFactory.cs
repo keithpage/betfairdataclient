@@ -37,7 +37,7 @@ namespace Betfair.Factory
     {
         public static class CommonProvider
         {
-            public const string SoapAPI6 = "Betfair.DataProvider.SoapAPI6.Sport";
+            public const string SoapAPI6 = "SoapAPI6";
         }
 
         public static ISports Create(string providerName)
