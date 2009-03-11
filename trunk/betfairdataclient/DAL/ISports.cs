@@ -1,0 +1,73 @@
+/* ISports.cs
+ * 
+ * Copyright (c) 2009 © The Sporting Exchange Limited. All rights reserved. http://www.betfair.com.
+ * BETFAIR® and the BETFAIR LOGO are registered trade marks of The Sporting Exchange Limited. 
+ * Data on Betfair website(s) (including pricing data) is protected by © and database rights. 
+ * It may not be used for any purpose without a licence.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *  1.  Redistributions of source code must retain the above copyright notice,
+ *		this list of conditions and the following disclaimer.
+ *  2.  Redistributions in binary form must reproduce the above copyright 
+ *		notice, this list of conditions and the following disclaimer in 
+ *		the documentation and/or other materials provided with the distribution.
+ *  3.  The names of the authors may not be used to endorse or promote products
+ *  	derived from this software without specific prior written permission.
+ * 
+ * The BetfairDataClient project is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * The work is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License. If not, see <http://www.gnu.org/licenses/>.
+ **/
+
+using System.Collections.Generic;
+using Betfair.Facade;
+
+namespace Betfair.DAL
+{
+    public interface ISports
+    {
+        /// <summary>
+        /// Gets or sets the connection.
+        /// </summary>
+        /// <value>The connection.</value>
+        IConnection Connection { get; set; }
+
+        /// <summary>
+        /// Gets the item.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        List<IData> GetItem(List<IData> data);
+
+
+        /// <summary>
+        /// Registers the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        List<IData> Register(List<IData> data);
+
+        /// <summary>
+        /// Unregisters the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        List<IData> Unregister(List<IData> data);
+
+        /// <summary>
+        /// Does the watch list contain items.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        List<IData> WatchListContains(List<IData> data);
+    }
+}
