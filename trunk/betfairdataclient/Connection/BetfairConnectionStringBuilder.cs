@@ -139,7 +139,7 @@ namespace Betfair.Connection
             {
                 if (ConnectionItems.ContainsKey("ProductId"))
                 {
-                    return (int) ConnectionItems["ProductId"];
+                    return Convert.ToInt32(ConnectionItems["ProductId"]);
                 }
                 return 0;
             }
@@ -162,7 +162,7 @@ namespace Betfair.Connection
             {
                 if (ConnectionItems.ContainsKey("SoftwareId"))
                 {
-                    return (int) ConnectionItems["SoftwareId"];
+                    return Convert.ToInt32(ConnectionItems["SoftwareId"]);
                 }
                 return 0;
             }
