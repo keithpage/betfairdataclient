@@ -28,11 +28,11 @@ namespace SimpleTestApplication
             sb.ConnectionString = "Username = MyUsername2; Provider = SoapAPI6; ProductId = 82; Password=MyPassword; MaxConnections = 20; CustomValue = 23456";
             Console.WriteLine(sb.ConnectionString);
 
-            ISports sport = SportFactory.Create(sb.Provider);
+            ISports sport = SportFactory.Create(sb);
             //ISports sport = SportFactory.Create(SportFactory.CommonProvider.SoapAPI6);
             //sport.Open(sb.ConnectionString);
 
-            IAccount account = AccountFactory.Create(AccountFactory.CommonAccountProviders.SoapAPI6);
+            IAccount account = AccountFactory.Create(sb);
             //account.Open(sb.ConnectionString);
 
             Console.WriteLine(account.ConnectionStatus.ToString());

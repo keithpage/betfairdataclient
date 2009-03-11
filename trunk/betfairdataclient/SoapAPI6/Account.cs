@@ -38,9 +38,16 @@ namespace Betfair.DataProvider.SoapAPI6
 {
     public sealed class Account : IAccount
     {
+        public Account(IConnectionString connection)
+        {
+            Connection = connection;
+        }
+
         #region IAccount Members
 
-        public void Open(string connectionString)
+        public IConnectionString Connection { get; set; }
+
+        public void Open()
         {
             throw new System.NotImplementedException();
         }

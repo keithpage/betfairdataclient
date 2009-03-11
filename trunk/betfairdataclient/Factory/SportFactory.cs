@@ -29,6 +29,7 @@
  **/
 
 using System;
+using Betfair.Connection;
 using Betfair.DAL;
 
 namespace Betfair.Factory
@@ -40,13 +41,13 @@ namespace Betfair.Factory
             public const string SoapAPI6 = "SoapAPI6";
         }
 
-        public static ISports Create(string providerName)
+        public static ISports Create(IConnectionString connection)
         {
-            switch (providerName)
+            switch (connection.Provider)
             {
                 case CommonProvider.SoapAPI6:
                     {
-                        return new DataProvider.SoapAPI6.Sport();
+                        return new DataProvider.SoapAPI6.Sport(connection);
                     }
                 default:
                     {
