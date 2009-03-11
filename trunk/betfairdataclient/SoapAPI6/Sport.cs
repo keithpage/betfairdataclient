@@ -30,47 +30,48 @@
 
 using System;
 using System.Collections.Generic;
+using Betfair.Connection;
 using Betfair.DAL;
 using Betfair.Facade;
+using ConnectionState=System.Data.ConnectionState;
 
 namespace Betfair.DataProvider.SoapAPI6
 {
     public class Sport : ISports
     {
-        #region ISports Members
+        public void Open(string connectionString)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Close()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Connection.ConnectionState Status()
+        {
+            throw new System.NotImplementedException();
+        }
 
         public List<IData> GetItem(List<IData> data)
         {
-            throw new NotImplementedException();
+            throw new System.NotImplementedException();
         }
 
         public List<IData> Register(List<IData> data)
         {
-            throw new NotImplementedException();
+            throw new System.NotImplementedException();
         }
 
         public List<IData> Unregister(List<IData> data)
         {
-            throw new NotImplementedException();
+            throw new System.NotImplementedException();
         }
 
         public List<IData> WatchListContains(List<IData> data)
         {
-            throw new NotImplementedException();
+            throw new System.NotImplementedException();
         }
-
-        public IConnection Connection
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        #endregion
     }
 }

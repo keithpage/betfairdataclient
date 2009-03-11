@@ -29,18 +29,13 @@
  **/
 
 using System.Collections.Generic;
+using Betfair.Connection;
 using Betfair.Facade;
 
 namespace Betfair.DAL
 {
-    public interface ISports
+    public interface ISports : IConnection
     {
-        /// <summary>
-        /// Gets or sets the connection.
-        /// </summary>
-        /// <value>The connection.</value>
-        IConnection Connection { get; set; }
-
         /// <summary>
         /// Gets the item.
         /// </summary>

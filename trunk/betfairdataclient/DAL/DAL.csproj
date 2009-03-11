@@ -51,9 +51,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Betfair.Facade\Betfair.Facade.csproj">
+    <ProjectReference Include="..\Betfair.Facade\Facade.csproj">
       <Project>{74306920-7923-4237-BF2F-E99DB50438D7}</Project>
-      <Name>Betfair.Facade</Name>
+      <Name>Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Connection\Connection.csproj">
+      <Project>{DD63D8FA-1685-4C2A-8E34-F752A238AA78}</Project>
+      <Name>Connection</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Betfair.Facade</RootNamespace>
-    <AssemblyName>Betfair.Facade</AssemblyName>
+    <AssemblyName>Facade</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,7 +49,6 @@
     <Compile Include="Account\ProfileBase.cs" />
     <Compile Include="Account\SessionBase.cs" />
     <Compile Include="IBase.cs" />
-    <Compile Include="IConnection.cs" />
     <Compile Include="IData.cs" />
     <Compile Include="ISession.cs" />
     <Compile Include="IValue.cs" />

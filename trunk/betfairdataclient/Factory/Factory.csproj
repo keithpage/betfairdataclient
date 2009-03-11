@@ -50,6 +50,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Betfair.Facade\Facade.csproj">
+      <Project>{74306920-7923-4237-BF2F-E99DB50438D7}</Project>
+      <Name>Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Connection\Connection.csproj">
+      <Project>{DD63D8FA-1685-4C2A-8E34-F752A238AA78}</Project>
+      <Name>Connection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{6B1EBE19-5288-45AC-A216-88EAA7AC6A85}</Project>
       <Name>DAL</Name>
