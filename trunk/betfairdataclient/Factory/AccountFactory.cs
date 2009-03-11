@@ -37,14 +37,14 @@ namespace Betfair.Factory
     {
         public static class CommonAccountProviders
         {
-            public const string SoapAPI6 = "Betfair.DataProvider.SoapAPI6.Account";
+            public const string SoapAPI6 = "SoapAPI6";
         }
 
         public static IAccount Create(string providerName)
         {
             switch (providerName)
             {
-                case "Betfair.DataProvider.SoapAPI6.Account":
+                case CommonAccountProviders.SoapAPI6:
                     {
                         return new DataProvider.SoapAPI6.Account();
                     }

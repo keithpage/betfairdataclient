@@ -47,6 +47,6 @@ namespace Betfair.Connection
         /// Current connections status.
         /// </summary>
         /// <returns></returns>
-        ConnectionState Status();
+        ConnectionState ConnectionStatus { get; set; }
     }
 }

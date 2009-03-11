@@ -50,10 +50,7 @@ namespace Betfair.DataProvider.SoapAPI6
             throw new System.NotImplementedException();
         }
 
-        public ConnectionState Status()
-        {
-            throw new System.NotImplementedException();
-        }
+        public Connection.ConnectionState ConnectionStatus { get; set; }
 
         public List<IData> GetItem(List<IData> data)
         {
