@@ -30,17 +30,12 @@
 
 using System.Collections.Generic;
 using Betfair.Facade;
+using Betfair.Connection;
 
 namespace Betfair.DAL
 {
-    public interface IAccount
+    public interface IAccount : IConnection
     {
-        /// <summary>
-        /// Gets or sets the connection.
-        /// </summary>
-        /// <value>The connection.</value>
-        IConnection Connection { get; set; }
-
         /// <summary>
         /// Gets the item.
         /// </summary>

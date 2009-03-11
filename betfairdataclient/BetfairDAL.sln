@@ -13,7 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheEngine", "CacheEngine\CacheEngine.csproj", "{EA0B477D-BF87-43CE-9A8F-8F33785BD2D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Betfair.Facade", "Betfair.Facade\Betfair.Facade.csproj", "{74306920-7923-4237-BF2F-E99DB50438D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "Betfair.Facade\Facade.csproj", "{74306920-7923-4237-BF2F-E99DB50438D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connection", "Connection\Connection.csproj", "{DD63D8FA-1685-4C2A-8E34-F752A238AA78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{74306920-7923-4237-BF2F-E99DB50438D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74306920-7923-4237-BF2F-E99DB50438D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74306920-7923-4237-BF2F-E99DB50438D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD63D8FA-1685-4C2A-8E34-F752A238AA78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD63D8FA-1685-4C2A-8E34-F752A238AA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD63D8FA-1685-4C2A-8E34-F752A238AA78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD63D8FA-1685-4C2A-8E34-F752A238AA78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

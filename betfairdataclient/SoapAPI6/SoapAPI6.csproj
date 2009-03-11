@@ -67,9 +67,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Betfair.Facade\Betfair.Facade.csproj">
+    <ProjectReference Include="..\Betfair.Facade\Facade.csproj">
       <Project>{74306920-7923-4237-BF2F-E99DB50438D7}</Project>
-      <Name>Betfair.Facade</Name>
+      <Name>Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Connection\Connection.csproj">
+      <Project>{DD63D8FA-1685-4C2A-8E34-F752A238AA78}</Project>
+      <Name>Connection</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{6B1EBE19-5288-45AC-A216-88EAA7AC6A85}</Project>
@@ -105,6 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="bin\Debug\SoapAPI6.dll.config" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -290,6 +296,20 @@
     <None Include="Web References\Betfair.api.soap.global\WithdrawToPaymentCardResp.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Betfair.Facade.dll" />
+    <Content Include="bin\Debug\Betfair.Facade.pdb" />
+    <Content Include="bin\Debug\DAL.dll" />
+    <Content Include="bin\Debug\DAL.pdb" />
+    <Content Include="bin\Debug\SoapAPI6.dll" />
+    <Content Include="bin\Debug\SoapAPI6.pdb" />
+    <Content Include="obj\Debug\SoapAPI6.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SoapAPI6.dll" />
+    <Content Include="obj\Debug\SoapAPI6.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -30,6 +30,7 @@
 
 using System;
 using System.Collections.Generic;
+using Betfair.Connection;
 using Betfair.DAL;
 using Betfair.Facade;
 
@@ -39,6 +40,21 @@ namespace Betfair.DataProvider.SoapAPI6
     {
         #region IAccount Members
 
+        public void Open(string connectionString)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Close()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public ConnectionState Status()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public List<IData> GetItem(List<IData> data)
         {
             throw new NotImplementedException();
@@ -47,18 +63,6 @@ namespace Betfair.DataProvider.SoapAPI6
         public List<IData> SetItem(List<IData> data)
         {
             throw new NotImplementedException();
-        }
-
-        public IConnection Connection
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
         }
 
         #endregion
