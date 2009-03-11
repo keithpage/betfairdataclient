@@ -33,10 +33,15 @@ namespace Betfair.Connection
     public interface IConnection
     {
         /// <summary>
-        /// Opens this connection using the specified connection string.
+        /// Gets or sets the connection.
         /// </summary>
-        /// <param name="connectionString">The connection string.</param>
-        void Open(string connectionString);
+        /// <value>The connection.</value>
+        IConnectionString Connection { get; set; }
+
+        /// <summary>
+        /// Opens this connection.
+        /// </summary>
+        void Open();
 
         /// <summary>
         /// Closes this connection.

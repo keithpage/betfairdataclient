@@ -38,9 +38,16 @@ namespace Betfair.DataProvider.SoapAPI6
 {
     public class Sport : ISports
     {
+        public Sport(IConnectionString connection)
+        {
+            this.Connection = connection;
+        }
+
         #region ISports Members
 
-        public void Open(string connectionString)
+        public IConnectionString Connection { get; set; }
+
+        public void Open()
         {
             throw new NotImplementedException();
         }
