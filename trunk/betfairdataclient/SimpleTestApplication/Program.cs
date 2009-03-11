@@ -25,7 +25,8 @@ namespace SimpleTestApplication
             sb.Username = null;
             Console.WriteLine(sb.ConnectionString);
 
-            sb.ConnectionString = "Username = MyUsername2; Provider = SoapAPI6; ProductId = 82; Password=MyPassword; MaxConnections = 20; CustomValue = 23456";
+            sb.ConnectionString =
+                "Username = MyUsername2; Provider = SoapAPI6; ProductId = 82; Password=MyPassword; MaxConnections = 20; CustomValue = 23456";
             Console.WriteLine(sb.ConnectionString);
 
             ISports sport = SportFactory.Create(sb);
