@@ -30,13 +30,10 @@ namespace SimpleTestApplication
             Console.WriteLine(sb.ConnectionString);
 
             ISports sport = SportFactory.Create(sb);
-            //ISports sport = SportFactory.Create(SportFactory.CommonProvider.SoapAPI6);
             //sport.Open(sb.ConnectionString);
 
             IAccount account = AccountFactory.Create(sb);
             //account.Open(sb.ConnectionString);
-
-            Console.WriteLine(account.ConnectionStatus.ToString());
         }
     }
 }
