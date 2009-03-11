@@ -49,15 +49,15 @@ namespace Betfair.DataProvider.SoapAPI6
 
         public void Open()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void Close()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public Connection.ConnectionState ConnectionStatus { get; set; }
+        public ConnectionState ConnectionStatus { get; set; }
 
         public List<IData> GetItem(List<IData> data)
         {

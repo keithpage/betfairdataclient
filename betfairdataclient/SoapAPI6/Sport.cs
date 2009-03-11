@@ -40,7 +40,7 @@ namespace Betfair.DataProvider.SoapAPI6
     {
         public Sport(IConnectionString connection)
         {
-            this.Connection = connection;
+            Connection = connection;
         }
 
         #region ISports Members

@@ -39,6 +39,12 @@ namespace Betfair.Connection
         IConnectionString Connection { get; set; }
 
         /// <summary>
+        /// Current connections status.
+        /// </summary>
+        /// <returns></returns>
+        ConnectionState ConnectionStatus { get; set; }
+
+        /// <summary>
         /// Opens this connection.
         /// </summary>
         void Open();
@@ -47,11 +53,5 @@ namespace Betfair.Connection
         /// Closes this connection.
         /// </summary>
         void Close();
-
-        /// <summary>
-        /// Current connections status.
-        /// </summary>
-        /// <returns></returns>
-        ConnectionState ConnectionStatus { get; set; }
     }
 }
